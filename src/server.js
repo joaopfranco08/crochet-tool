@@ -41,7 +41,7 @@ function menu_display(rows){
         }
     }
     return menu_list
-}
+} 
 
 
 server.get("/", (req, res) => {
@@ -53,7 +53,7 @@ server.get("/", (req, res) => {
         menu_list.sort(function(a, b) {
             return b[1] - a[1];
         });
-        // const unicornio = rows.filter((row) => (row.amigurumi === 'Unicórnio'))
+    
         res.render("nini-menu.html", {menu_list: menu_list, unicornio})
     })
 })
